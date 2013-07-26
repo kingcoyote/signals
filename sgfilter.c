@@ -10,6 +10,7 @@ int sgfilteri(int* input, int window) {
             output += SGF_5_3 * input[2];
             output += SGF_5_4 * input[3];
             output += SGF_5_5 * input[4];
+            output /= SGF_N;
             break;
         case 7:
             break;

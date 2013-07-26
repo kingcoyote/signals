@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 #include "sgfilter.h"
 
@@ -12,8 +13,20 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
+    srand(time(NULL));
+
     if (strcmp(argv[1], "--sgfilter") == 0) {
-        printf("Savitzky-Golay filter test not yet implemented\n");
+        int *input = malloc(sizeof(int) * 5);
+        input[0] = rand() % 200;
+        input[1] = rand() % 200 + 800;
+        input[2] = rand() % 200 + 1200;
+        input[3] = rand() % 200 + 1400;
+        input[4] = rand() % 200 + 1200;
+
+        printf("Input is: %d, %d, %d, %d, %d\n", input[0], input[1], input[2], input[3], input[4]);
+        printf("Savitzky-Golay filter:\n");
+        printf("  Window size: %i\n", 5);
+        printf("  Output: %i\n", sgfilteri(input, 5));
         return 0;
     } else if(strcmp(argv[1], "--outlier") == 0) {
         printf("Outlier exclusion filter test not yet implemented\n");
