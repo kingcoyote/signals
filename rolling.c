@@ -1,1 +1,0 @@
-#define rollingi(current, new, samples) (current * (samples - 1) + new) / samples

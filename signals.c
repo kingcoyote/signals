@@ -1,48 +1,49 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <time.h>
-
 #include "sgfilter.h"
 
-void show_help();
+int sgfilteri(int* input, int window) {
+    int output = 0;
 
-int main(int argc, char *argv[]) {
-    if(argc < 2) {
-        show_help();
-        return 0;
+    switch(window) {
+        case 5:
+            output += (SGF_5_1 * input[0]) / SGF_5_N;
+            output += (SGF_5_2 * input[1]) / SGF_5_N;
+            output += (SGF_5_3 * input[2]) / SGF_5_N;
+            output += (SGF_5_4 * input[3]) / SGF_5_N;
+            output += (SGF_5_5 * input[4]) / SGF_5_N;
+            break;
+        case 7:
+            output += (SGF_7_1 * input[0]) / SGF_7_N;
+            output += (SGF_7_2 * input[1]) / SGF_7_N;
+            output += (SGF_7_3 * input[2]) / SGF_7_N;
+            output += (SGF_7_4 * input[3]) / SGF_7_N;
+            output += (SGF_7_5 * input[4]) / SGF_7_N;
+            output += (SGF_7_6 * input[5]) / SGF_7_N;
+            output += (SGF_7_7 * input[6]) / SGF_7_N;
+            break;
+        case 9:
+            output += (SGF_9_1 * input[0]) / SGF_9_N;
+            output += (SGF_9_2 * input[1]) / SGF_9_N;
+            output += (SGF_9_3 * input[2]) / SGF_9_N;
+            output += (SGF_9_4 * input[3]) / SGF_9_N;
+            output += (SGF_9_5 * input[4]) / SGF_9_N;
+            output += (SGF_9_6 * input[5]) / SGF_9_N;
+            output += (SGF_9_7 * input[6]) / SGF_9_N;
+            output += (SGF_9_8 * input[5]) / SGF_9_N;
+            output += (SGF_9_9 * input[6]) / SGF_9_N;
+            break;
     }
 
-    srand(time(NULL));
-
-    if (strcmp(argv[1], "--sgfilter") == 0) {
-        int *input = malloc(sizeof(int) * 5);
-        input[0] = rand() % 200;
-        input[1] = rand() % 200 + 800;
-        input[2] = rand() % 200 + 1200;
-        input[3] = rand() % 200 + 1400;
-        input[4] = rand() % 200 + 1200;
-
-        printf("Input is: %d, %d, %d, %d, %d\n", input[0], input[1], input[2], input[3], input[4]);
-        printf("Savitzky-Golay filter:\n");
-        printf("  Window size: %i\n", 5);
-        printf("  Output: %i\n", sgfilteri(input, 5));
-        return 0;
-    } else if(strcmp(argv[1], "--outlier") == 0) {
-        printf("Outlier exclusion filter test not yet implemented\n");
-        return 0;
-    } else if (strcmp(argv[1], "--rolling") == 0) {
-        printf("Rolling average test not yet implemented\n");
-        return 0; 
-    } 
-
-    return 0;
+    return output;
 }
 
-void show_help() {
-    printf("Usage:\n");
-    printf("  --sgfilter     Perform a test with the Savitzky-Golay filter.\n");
-    printf("  --outlier      Perform a test with outlier exclusion.\n");
-    printf("  --rolling      Perform a test with rolling averages.\n");
+long sgfilterl(long* input, int window) {
+    long output = 0;
+
+    return output;
 }
 
+float sgfilterf(float* input, int window) {
+    float output = 0.0;
+
+    return output;
+}

@@ -35,4 +35,6 @@ int sgfilteri(int*, int);
 long sgfilterl(long*, int);
 float sgfilterf(float*, int);
 
+#define rolling_avg(current, new, samples) (current * (samples - 1) + new) / samples
+
 #endif

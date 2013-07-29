@@ -1,1 +1,0 @@
-#define rolling_avg(current, new, samples) (current * (samples - 1) + new) / samples
