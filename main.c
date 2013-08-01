@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 
-#include "sgfilter.h"
+#include "signals.h"
 
 void show_help();
 
