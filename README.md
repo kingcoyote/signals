@@ -14,8 +14,10 @@ Algorithms
 The following algorithms will be implemented by this library:
 
 * Savitsky-Golay filter
-* Outlier exclusion
+* Innerquartile range
 * Rolling average
+* Xbar and R
+* Dynamic range compression
 
 License
 -------------------------------------------------------------------------------
