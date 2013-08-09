@@ -9,6 +9,7 @@ typedef enum {
 } datatype;
 
 void* sgfilter(void*, int, datatype);
+void sort(long*, int);
 
 #define rolling_avg(current, new, samples) (current * (samples - 1) + new) / samples
 
