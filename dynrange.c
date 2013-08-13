@@ -3,7 +3,7 @@
 
 void dynrange(long *input, int length) {
     int n;
-    long avg;
+    long avg = 0;
     long range;
 
     for(n = 0; n < length; n++) {
