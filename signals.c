@@ -104,3 +104,14 @@ void sort(long *input, int length) {
         }
     }
 }
+
+long average(long *input, int length) {
+    long out = 0;
+    int i = 0;
+
+    for(i = 0; i < length; i++) {
+        out += input[i];
+    }
+
+    return out / length;
+}
