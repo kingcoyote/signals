@@ -1,14 +1,6 @@
-#ifndef _SGFILTER_H
-#define _SGFILTER_H
+#ifndef _SIGNALS_H_
+#define _SIGNALS_H_
 
-typedef enum {
-    DT_INT,
-    DT_LONG,
-    DT_FLOAT,
-    DT_DOUBLE
-} datatype;
-
-void* sgfilter(void*, int, datatype);
 void sort(long*, int);
 long average(long*, int);
 

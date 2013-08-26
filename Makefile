@@ -3,7 +3,7 @@ CC=gcc
 COM=commander.c/src/commander.c
 
 all:
-	$(CC) $(CFLAGS) $(COM) noisemain.c signals.c dynrange.c -o noise
+	$(CC) $(CFLAGS) $(COM) noisemain.c signals.c dynrange.c sgfilter.c -o noise
 	$(CC) $(CFLAGS) $(COM) unionfindmain.c unionfind.c -o unionfind
 
 clean:
