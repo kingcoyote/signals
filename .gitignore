@@ -20,4 +20,5 @@
 *.swp
 
 # Compiled binaries
-main
+noise
+unionfind

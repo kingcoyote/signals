@@ -1,8 +1,11 @@
 CFLAGS=-Wall -g -std=c99
 CC=gcc
+COM=commander.c/src/commander.c
 
 all:
-	$(CC) $(CFLAGS) main.c signals.c commander.c/src/commander.c dynrange.c unionfind.c -o main
+	$(CC) $(CFLAGS) $(COM) noisemain.c signals.c dynrange.c -o noise
+	$(CC) $(CFLAGS) $(COM) unionfindmain.c unionfind.c -o unionfind
 
 clean:
-	rm main
+	rm noise
+	rm unionfind
