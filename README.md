@@ -13,11 +13,20 @@ Algorithms
 -------------------------------------------------------------------------------
 The following algorithms will be implemented by this library:
 
+Noise reduction:
 * Savitsky-Golay filter
 * Innerquartile range
 * Rolling average
 * Xbar and R
 * Dynamic range compression
+
+Sorting:
+* Selection sort
+* Insertion sort
+* Shell sort
+* Mergesort
+* Quicksort
+* Heapsort
 
 License
 -------------------------------------------------------------------------------
