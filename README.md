@@ -1,7 +1,7 @@
 Signals
 ===============================================================================
 
-This library contains common signal filtering algorithms written in C, with  an 
+This library contains common signal filtering algorithms written in C, with an 
 emphasis on firmware development. This emphasis includes a small footprint,
 minimal size of local variables and parameters, and quick execution.
 
@@ -13,12 +13,19 @@ Algorithms
 -------------------------------------------------------------------------------
 The following algorithms will be implemented by this library:
 
-Noise reduction:
+Data Collections:
+* Stack
+* Queue
+* Deque
+* Priority Queue
+
+Digital Signal Processing
 * Savitsky-Golay filter
 * Innerquartile range
 * Rolling average
 * Xbar and R
 * Dynamic range compression
+* Weighted rolling average
 
 Sorting:
 * Selection sort
@@ -44,3 +51,4 @@ A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along with 
 this program; if not, write to the Free Software Foundation, Inc., 51 Franklin 
 Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
