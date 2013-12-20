@@ -1,4 +1,4 @@
-#include "stack.h"
+#include "collection.h"
 #include <stdlib.h>
 
 stack* stack_init() {

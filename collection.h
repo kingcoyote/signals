@@ -1,5 +1,5 @@
-#ifndef __STACK_H_
-#define __STACK_H_
+#ifndef __COLLECTION_H_
+#define __COLLECTION_H_
 
 struct _stack_node {
     struct _stack_node* next;

@@ -1,4 +1,4 @@
-#include "stack.h"
+#include "collection.h"
 #include <stdio.h>
 
 int main(int argc, char **argv) {
